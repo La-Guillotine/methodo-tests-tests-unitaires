@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "unit-test": "mocha -r ts-node/register lib/tests/unit-tests/*",
-    "login-test": "mocha -r ts-node/register lib/tests/login-tests/*",
-    "bourse-test": "mocha -r ts-node/register lib/tests/bourses-tests/*",
-    "lift-test": "mocha -r ts-node/register lib/tests/ascenseur-mock/*"
+    "ex1-test": "mocha -r ts-node/register lib/tests/ex1/*",
+    "ex2-test": "mocha -r ts-node/register lib/tests/ex2/*",
+    "ex3-test": "mocha -r ts-node/register lib/tests/ex3/*",
+    "ex4-test": "mocha -r ts-node/register lib/tests/ex4/*"
   },
   "repository": {
     "type": "git",
