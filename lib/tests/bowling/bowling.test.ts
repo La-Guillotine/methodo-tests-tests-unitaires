@@ -16,7 +16,6 @@ describe('Bowling game Kata', () => {
             let game: Game = new Game();
             game.roll(5);
 
-            assert.isAtMost(5, 10);
             assert.strictEqual(5, game.lancers[0]);
         });
         it('Add one roll to array lancers not empty', () => {
@@ -24,7 +23,6 @@ describe('Bowling game Kata', () => {
             game.lancers = [8, 1]
             game.roll(7);
 
-            assert.isAtMost(7, 10);
             assert.strictEqual(game.lancers.length, 3);
             expect(game.lancers).to.deep.equal([8, 1, 7]);
 
@@ -124,9 +122,9 @@ describe('Bowling game Kata', () => {
         });
         it('2 strikes d\'affilés', () => {
             let game: Game = new Game();
-            game.roll(10);
-            game.roll(10);
-            game.roll(2);
+            game.roll(10);//22
+            game.roll(10);//19
+            game.roll(2);//9
             game.roll(7);
 
             assert.equal(game.score(), 50);
@@ -237,6 +235,36 @@ describe('Bowling game Kata', () => {
             game.roll(10);game.roll(5);game.roll(5);//20
 
             assert.equal(game.score(), 142);
+        });
+        it('Partie parfaite', () => {
+            let game: Game = new Game();
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);game.roll(10);game.roll(10);
+
+            assert.equal(game.score(), 300);
+        });
+        it('Partie parfaite + 1 strike en trop', () => {
+            let game: Game = new Game();
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);
+            game.roll(10);game.roll(10);game.roll(10);game.roll(10);
+
+            assert.equal(game.score(), 300);
         });
     });
 });
