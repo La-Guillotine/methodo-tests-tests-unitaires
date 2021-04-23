@@ -110,7 +110,8 @@ describe('Bowling game Kata', () => {
         it('Strike avec deux lancers gouttières', () => {
             let game: Game = new Game();
             game.roll(10);
-
+            game.roll(0);
+            game.roll(0);
             assert.equal(game.score(), 10);
         });
         it('Strike avec bonus', () => {
