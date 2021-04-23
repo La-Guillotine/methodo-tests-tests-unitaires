@@ -10,12 +10,8 @@ export class Pool{
     }
     allumer_chauffage(){
         let actualtemp: number = this.poolLogic.get_actual_temp();
-        if( average(this.poolLogic.get_last_days_temp()) > 20 && actualtemp > 23){
-            this.poolLogic.set_heater(true);
-        }
-        else{
-            this.poolLogic.set_heater(false);
-        }
+        if( average(this.poolLogic.get_last_days_temp()) > 20 && actualtemp > 23) this.poolLogic.set_heater(true);
+        else this.poolLogic.set_heater(false);
     }
 
     
