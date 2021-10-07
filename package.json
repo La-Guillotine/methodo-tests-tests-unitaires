@@ -8,7 +8,8 @@
     "ex2-test": "mocha -r ts-node/register lib/tests/ex2/*",
     "ex3-test": "mocha -r ts-node/register lib/tests/ex3/*",
     "ex4-test": "mocha -r ts-node/register lib/tests/ex4/*",
-    "bowling-test": "mocha -r ts-node/register lib/tests/bowling/*"
+    "bowling-test": "mocha -r ts-node/register lib/tests/bowling/*",
+    "fizz-buzz": "mocha -r ts-node/register lib/tests/fizzBuzz/*"
   },
   "repository": {
     "type": "git",
